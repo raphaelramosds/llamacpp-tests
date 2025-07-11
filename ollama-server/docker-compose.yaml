@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  server:
+    image: ollama-server:local
+    build:
+      context: .
+      args:
+        OLLAMA_MODEL: qwen3:1.7b
+    ports:
+      - 11434:11434
+    volumes:
+      - ollama:/root/.ollama
+
+volumes:
+  ollama:

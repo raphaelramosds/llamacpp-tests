@@ -1,0 +1,21 @@
+[project]
+name = "ollama-client"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Raphael Ramos",email = "raphael.opensource@gmail.com"}
+]
+readme = "README.md"
+requires-python = "<4.0,>=3.9"
+dependencies = [
+    "langchain (>=0.3.26,<0.4.0)",
+    "langchain-ollama (>=0.3.4,<0.4.0)"
+]
+
+[tool.poetry]
+packages = [{include = "ollama_client", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
